@@ -20,14 +20,18 @@ const IssuesList = () => {
 
   const getPriorityColor = (priority) => {
     switch (priority) {
+      case "urgent":
+        return "#dc2626"; // Red-600 - Most critical
       case "high":
-        return "#dc2626";
+        return "#ea580c"; // Orange-600 - High priority
       case "medium":
-        return "#ea580c";
+        return "#ca8a04"; // Yellow-600 - Medium priority
       case "low":
-        return "#059669";
+        return "#059669"; // Green-600 - Low priority
+      case "none":
+        return "#6b7280"; // Gray-500 - No priority
       default:
-        return "#6b7280";
+        return "#6b7280"; // Gray-500 - Default/unknown
     }
   };
 
